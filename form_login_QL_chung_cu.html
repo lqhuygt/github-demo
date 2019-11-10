@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quản lý Chung Cư</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<style>
+			body{
+				background-image: url("http://chungcuvip.biz/upload/images/e0d4dd57cf3e3ef248d0f95f2a251a05.jpg" );
+				height: 100vh;
+				background-repeat: no-repeat;
+				background-size:cover;
+				/*background-color: #CCFFCC;	*/
+			}
+
+			.row-container {
+				border-radius: 20px;
+				border:1px solid #fff;
+				margin-top: 20vh;
+				padding: 30px;
+				box-shadow: -14px 13px 64px 5px #000;
+				-moz-box-shadow: -14px 13px 64px 5px #000;
+    			-webkit-box-shadow: -14px 13px 64px 5px #000;
+			}
+
+			h1{
+				text-align: center;
+				color: white;
+				text-shadow: 5px 5px 10px #000;
+			}
+		</style>
+		<script>
+			function validate(){
+				var username = document.getElementById("name");
+				var password = document.getElementById("pass")
+
+				if (username.value == "" || password.value == "") {
+					alert("Không được để trống!");
+				}else if(password.value.trim().length < 6){
+					alert("password phải có độ dài trên 6 kí tự!");
+				}else{
+					alert("Bạn đã đăng nhập thành công!");
+				}
+			}
+		</script>
+</head>
+<body>
+	<div class="container-fluid bg">
+		<div class="row justify-content-center">
+			<div class=".col-md-3 col-sm-6 col-xs-12 row-container	">
+				<form onsubmit="validate()">
+					<h1>Login your apartment</h1>
+					<div class="form-group">
+						<input type="text" class="form-control" id="name" placeholder="Enter your phone">
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" id="pass" placeholder="Enter your password">
+					</div>
+					<button type="submit" class="btn btn-success btn-block my-4">Login</button>
+				</form>
+			</div>	
+		</div>
+	</div>
+</body>
+</html>
